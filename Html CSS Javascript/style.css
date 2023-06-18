@@ -1,0 +1,62 @@
+body {
+  background-color: #f6f5f7;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #860192;
+  color: #fff;
+  padding: 20px;
+}
+
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons input[type="submit"],
+.buttons input[type="button"] {
+  background-color: #6a0dad;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-image: url('C:\Users\HP\Downloads\HACKATHON\COEP.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.buttons input[type="submit"]:hover,
+.buttons input[type="button"]:hover {
+  transform: scale(1.05);
+}
