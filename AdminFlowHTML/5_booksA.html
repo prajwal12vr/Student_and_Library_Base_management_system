@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Available Books</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>College Library Database</h1>
+    <input type="button" value="Edit Info" onclick="location.href='4_editDetailsAdmin.html';" class="books-button">
+    <input type="button" value="Log Out" onclick="location.href='../StudentFlowHTML/1_login.html';" class="books-button">
+    <input type="button" value="Students" onclick="location.href='6_students.html';" class="books-button">
+    <input type="button" value="Add Book" onclick="location.href='5.1_updateBooks.html';" class="books-button">
+  </header>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Author</th>
+          <th>Section</th>
+          <th>Scheduled Date</th>
+          <th>Date of Return</th>
+          <th>Availability</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Book 1</td>
+          <td>Author 1</td>
+          <td>Section 1</td>
+          <td>12/06/2023</td>
+          <td>12/07/2023</td>
+          <td>In Use</td>
+          <td>
+            <button onclick="location.href='6.1_updateStudents.html';">
+              <span class="button condensed butt">Update</span>
+            </button>
+
+            <button>
+              <span class="button condensed butt">Delete</span>
+            </button>
+          </td>
+        </tr>
+        <!-- Add more rows for other books -->
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

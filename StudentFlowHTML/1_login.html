@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Welcome to COEP Website</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to COEP Website</h1>
+  </header>
+<div id="demo">
+  <div class="container1">
+  <form action="login.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <div class="buttons">
+      <input type="submit" value="Login as Student" onclick="location.href='3_studentDetails.html';">
+      <input type="button" value="Signup" onclick="location.href='2_signup.html';">    
+      <input type="submit" value="Login as Admin" onclick="location.href='../AdminFlowHTML/3_adminDetails.html';">
+    </div>
+  </form>
+  </div>
+</div>
+
+</body>
+
+</html>
