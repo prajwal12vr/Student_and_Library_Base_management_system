@@ -1,0 +1,214 @@
+body {
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Georgia", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #6a0dad;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: "Helvetica", sans-serif;
+    font-weight: bold;
+  }
+
+  .container {
+    max-width: 500px;
+    margin: 50px auto 0;
+    background-color: #fffdfd;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  .container1 {
+    max-width: 500px;
+    margin: 200px auto 0;
+    background-color: #fffdfd;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  #demo {
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ec1111;
+    background-image: url('coepImage.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  form label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: "Georgia", sans-serif;
+  }
+  
+  form input[type="text"],
+  form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-family: "Georgia", sans-serif;
+  }
+  
+  .buttons {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  
+  .buttons input[type="submit"],
+  .buttons input[type="button"] {
+    background-color: #6a0dad;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Helvetica", sans-serif;
+    font-weight: bold;
+  }
+  
+  .buttons input[type="submit"]:hover,
+  .buttons input[type="button"]:hover {
+    background-color: #4e0877;
+  }
+  
+  .logout {
+    color: #000;
+    float: right;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .logout:hover {
+    color: #444;
+  }
+  
+  .edit-info {
+    color: #fff;
+    float: right;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .edit-info:hover {
+    color: #ddd;
+  }
+  
+  .books-button {
+    background-color: #6a0dad;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Helvetica", sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .books-button1 {
+    background-color: #6a0dad;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Helvetica", sans-serif;
+    font-weight: bold;
+    margin-left: 60px;
+    margin-right: 6px;
+    margin-top: 40px;
+  }
+  
+  .books-button:hover {
+    background-color: #4e0877;
+  }
+  
+  .table-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Georgia", sans-serif;
+  }
+  
+  table th {
+    background-color: #6a0dad;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .page-header {
+    background-color: #6a0dad;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: "Helvetica", sans-serif;
+    font-weight: bold;
+  }
+  
+  .page-container {
+    max-width: 500px;
+    margin: 40px auto ;
+    background-color: light #6a0dad;
+    padding: 40px;
+    border-radius: 10px;
+  }
+
+  .page-container h2 {
+    text-align: center;
+  }
+
+  .custom-icon::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f044";
+    margin-right: 5px;
+  }
+
+  .custom-icon:last-child::before {
+    content: "\f1f8";
+  }
+
+  .button {
+    font-family: "Georgia", sans-serif;
+    font-size: 16px;
+    font-weight:400;
+    display:inline-block;
+    color:#FFF;
+    padding: 1.5px;
+    border-radius: .25em;
+    text-shadow: -1px -1px 0px rgba(0,0,0,0.4);
+  }
+  .condensed.butt:before {
+     content:none;
+  }
+  .butt {
+    background: #6a0dad;
+  }
+  .inlineIcon.butt:before {
+      color: #6a0dad;
+  }

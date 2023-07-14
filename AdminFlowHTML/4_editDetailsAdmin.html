@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Update Details</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Update Details</h1>
+  </header>
+
+  <div class="container">
+    <form action="admin_update.php" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email ID:</label>
+      <input type="text" id="email" name="email" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" name="phone" required>
+
+      <label for="branch">Branch:</label>
+      <input type="text" id="branch" name="branch" required>
+
+      <label for="password">New Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <div class="buttons">
+        <input type="submit" value="Submit" onclick="location.href='3_adminDetails.html';" >
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
+
