@@ -2,7 +2,9 @@ const express=require('express');
 const mongoose = require('mongoose');
 const app=express();
 const User=require('./model/user');
+const ejs=require('ejs');
 const bodyParser = require('body-parser');
+const path=require('path');
 
 
 mongoose.connect('mongodb://localhost:27017/lib', { useUnifiedTopology: true, useNewUrlParser: true });
@@ -15,6 +17,11 @@ db.once('open', () => {
   console.log('Connected to MongoDB');
 });
 app.use(express.static('public'));
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
@@ -25,11 +32,10 @@ app.get('/', (req, res) => {
   });
   app.post('/user/login', async (req, res) => {
     const { email, password } = req.body;
-  
+   
     try {
-      const nser = await User.findOne({ email, password }).exec();
-  
-      if (nser) {
+      const user = await User.findOne({ email, password }).exec();
+      if (!user) {
         return res.status(404).send('User not found. Please check your email and password.');
       }
   
@@ -37,7 +43,8 @@ app.get('/', (req, res) => {
       // ...
       
     //  res.send('Login Successful');
-    res.sendFile(__dirname+'/public/3_mainpage.html');
+    // res.sendFile(__dirname+'/public/3_mainpage.html');
+    res.render('profile', { user });
     
     
     } catch (error) {
@@ -45,23 +52,22 @@ app.get('/', (req, res) => {
       res.status(500).send('An error occurred during login.');
     }
   });
-  // app.get('/student/details', async (req, res) => {
-  //   // Retrieve the currently logged-in user's email from the session or request headers
-  //   const email = req.session.email; // Assuming you are using sessions for authentication
+  app.get('/profile', async (req, res) => {
+    // Retrieve the user ID from the session or any other authentication mechanism
+    const userId = req.userId;
   
-  //   try {
-  //     const student = await User.findOne({ email }, 'name email phoneNumber branch').exec();
+    // Fetch the user data from the database
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.send('User not found');
+    }
   
-  //     if (!student) {
-  //       return res.status(404).send('Student not found');
-  //     }
+    // Render the profile page with user data
+    res.render('profile', { user });
+  });
+
+
   
-  //     res.send(student);
-  //   } catch (error) {
-  //     console.error(error);
-  //     res.status(500).send('An error occurred while fetching student details');
-  //   }
-  // });
   
   
   app.post('/signup', (req, res) => {
