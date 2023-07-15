@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Students Data</title>
+        <link rel="stylesheet" href="/style.css">
+      </head>
+<body>
+    <body>
+        <header>
+            <h1>Students Data</h1>
+            <input type="button" value="Edit Info" onclick="location.href='/edit';" class="books-button">
+            <input type="button" value="Log Out" onclick="location.href='/';" class="books-button">
+            <input type="button" value="Add Student" onclick="location.href='/signup';" class="books-button">
+            <input type="button" value="Books" onclick="location.href='/books';" class="books-button">
+            
+          </header>
+  <<div class="table-container">
+    <table>
+      <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Branch</th>
+        </tr>
+      </thead>
+    <tbody>
+      <% student.forEach((item) => { %>
+        <tr>
+          <td><%= item.name %></td>
+          <td><%= item.email %></td>
+          <td><%= item.branch %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

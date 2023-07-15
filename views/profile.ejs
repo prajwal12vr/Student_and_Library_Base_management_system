@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Profile</title>
+    <link rel="stylesheet"  href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Student Profile</h1>
+      <input type="button" value="Edit Info" onclick="location.href='/edit';" class="books-button" >
+      <input type="button" value="Books" onclick="location.href='/show/books';" class="books-button">
+      <input type="button" value="Log Out" onclick="location.href='/';" class="books-button">
+    </header>
+  <div class="container">
+    <h2>Welcome, <%= user.name %>!</h2>
+    <p>Email:  <%= user.email %></p>
+    <p>Branch:  <%= user.branch %></p>
+    <p>Phone Number: <%=user.phoneNumber %></p>
+    <p>Password: <%=user.password %></p>
+    
+    
+  </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+  
+

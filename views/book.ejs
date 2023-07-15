@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>COEP Library</title>
+        <link rel="stylesheet" href="/style.css">
+      </head>
+<body>
+    <body>
+        <header>
+          <h1>COEP Library</h1>
+          <input type="button" value="Edit Info" onclick="location.href='/edit';" class="books-button">
+          <input type="button" value="Log Out" onclick="location.href='/';" class="books-button">
+          <input type="button" value="Add Books" onclick="location.href='/add/book';" class="books-button">
+          <input type="button" value="Students" onclick="location.href='/student';" class="books-button">
+        </header>
+  <<div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Author</th>
+          <th>Section</th>
+        </tr>
+      </thead>
+    <tbody>
+      <% books.forEach((item) => { %>
+        <tr>
+          <td><%= item.name %></td>
+          <td><%= item.author %></td>
+          <td><%= item.section %></td>
+          
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>

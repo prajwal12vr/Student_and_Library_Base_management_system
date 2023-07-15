@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Profile</title>
+    <link rel="stylesheet"  href="/style.css">
+  </head>
+  <body>
+    <header>
+        <h1>Admin Profile</h1>
+        <input type="button" value="Edit Info" onclick="location.href='/edit';" class="books-button">
+        <input type="button" value="Log Out" onclick="location.href='/admin';" class="books-button">
+        <input type="button" value="Books" onclick="location.href='/books';" class="books-button">
+        <input type="button" value="Students" onclick="location.href='/student';" class="books-button">
+      </header>
+ 
+
+ <div class="container">
+    <h2>Welcome, <%= admin.name %>!</h2>
+    <p>Email: <%= admin.email %></p>
+    <p>Phone: <%= admin.phone %></p>
+    <p>Password<%=admin.password %></p>
+    <p>Branch: <%= admin.branch %></p>
+    </div>
+  
+</body>
+</html>
+<!DOCTYPE html>
+<html>

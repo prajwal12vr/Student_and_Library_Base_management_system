@@ -1,0 +1,44 @@
+const express=require('express');
+const mongoose = require('mongoose');
+const app=express();
+const user=require('./model/user');
+
+/**
+ * Make MongoDB connection
+ */
+const MongoClient = require('mongodb').MongoClient;
+
+const uri = 'mongodb://localhost:27017/lib';
+const client = new MongoClient(uri, { useUnifiedTopology: true });
+
+// Rest of your MongoDB code using the client
+
+(async () => {
+   await mongoose.connect('mongodb://localhost:27017/lib');
+})();
+app.use(express.static('public'));
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname+'/public/1_login.html');
+  });
+
+  app.post('/signup', (req, res) => {
+    const user = new user(req.body);
+    user.name = req.body.name;
+    user.collegeID = req.body.collegeID;
+    user.email = req.body.email;
+    user.password = req.body.password;
+    user.phoneNumber = req.body.phoneNumber;
+    user.branch = req.body.branch;
+    user.save((err) => {
+      if (err) {
+        console.log(err);
+        return res.status(500).send('Error creating user');
+      }
+      res.send('User created successfully');
+    });
+  });
+  // Start the server
+  app.listen(3000, () => {
+    console.log('Server running on http://localhost:3000');
+  });
